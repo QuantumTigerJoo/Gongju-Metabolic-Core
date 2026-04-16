@@ -34,4 +34,4 @@ Lean_TEM_Context = {
 }
 
 ### 🎥 Live Metabolic Reflex Audit
-![Metabolic Reflex Test](Pre-Inference_CircuitBreaker.mp4)
+<video src="Pre-Inference_CircuitBreaker.mp4" width="100%" controls></video>
