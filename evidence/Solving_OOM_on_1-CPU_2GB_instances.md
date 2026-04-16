@@ -34,4 +34,5 @@ Lean_TEM_Context = {
 }
 
 ### 🎥 Evidence: Logic in Motion
+### 🎥 Evidence: Logic in Motion
 <video src="Pre-Inference_CircuitBreaker.mp4" width="100%" controls></video>
