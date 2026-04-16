@@ -32,3 +32,5 @@ Lean_TEM_Context = {
     "Resonance Code": f"{psi_report.resonance_code}",
     "Energy Intensity (H)": f"{3.14 * (psi_report.coherence**2):.2f}"
 }
+
+![Pre-Inference Circuit Breaker](Pre-Inference_CircuitBreaker.mp4)
