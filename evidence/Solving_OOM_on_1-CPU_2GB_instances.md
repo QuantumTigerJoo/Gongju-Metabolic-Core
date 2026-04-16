@@ -33,5 +33,5 @@ Lean_TEM_Context = {
     "Energy Intensity (H)": f"{3.14 * (psi_report.coherence**2):.2f}"
 }
 
-### 🎥 Live Metabolic Reflex Audit
-<video src="Pre-Inference_CircuitBreaker.mp4" width="100%" controls></video>
+### 🎥 Evidence: Logic in Motion
+https://github.com/QuantumTigerJoo/Gongju-Metabolic-Core/blob/main/media/Pre-Inference_CircuitBreaker.mp4
