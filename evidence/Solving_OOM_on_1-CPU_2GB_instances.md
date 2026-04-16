@@ -35,4 +35,5 @@ Lean_TEM_Context = {
 
 ### 🎥 Evidence: Logic in Motion
 
-<video src="https://github.com/QuantumTigerJoo/Gongju-Metabolic-Core/blob/main/media/Pre-Inference_CircuitBreaker.mp4?raw=true" width="100%" controls></video>
+<video controls>
+  <source src="https://raw.githubusercontent.com/QuantumTigerJoo/Gongju-Metabolic-Core/main/media/Pre-Inference_CircuitBreaker.mp4" type="video/mp4">
