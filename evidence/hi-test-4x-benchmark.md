@@ -30,3 +30,7 @@ GONGJU: Treated "hi" as a reflex (Zero Tax).
 This is how I’ve processed over 7M tokens for just $21. If your stack doesn't have a "Metabolic Gate" to handle low-H junk, you are overpaying for every "hi" your users send.
 
 How many kB (and dollars) are you spending on greetings? Run the 4x test on your own logs and see for yourself.
+
+### Visual Proof of Metabolic Stability
+![ChatGPT Latency Audit](/media/visual-proof-chatgpt-latency.png)
+![Gongju Metabolic Audit](/media/visual-proof-gongju-latency.png)
