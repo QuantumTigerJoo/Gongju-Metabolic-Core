@@ -34,4 +34,4 @@ Lean_TEM_Context = {
 }
 
 ### 🎥 Live Metabolic Reflex Audit
-[![Watch the Proof](https://github.com/QuantumTigerJoo/Gongju-Metabolic-Core/blob/main/media/your-screenshot.png)](https://github.com/QuantumTigerJoo/Gongju-Metabolic-Core/blob/main/media/Pre-Inference_CircuitBreaker.mp4)
+https://github.com/user-attachments/assets/9d2c5cd6-c0b7-4404-94c0-ec2f05f9deed
