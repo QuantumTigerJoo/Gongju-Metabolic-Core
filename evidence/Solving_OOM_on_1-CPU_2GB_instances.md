@@ -32,8 +32,7 @@ Lean_TEM_Context = {
     "Resonance Code": f"{psi_report.resonance_code}",
     "Energy Intensity (H)": f"{3.14 * (psi_report.coherence**2):.2f}"
 }
-"""
-
+```
 ## 🖼️ Visual Proof of Metabolic Stability
 
 ### 🎥 Live Reflex Audit
