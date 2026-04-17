@@ -1,36 +1,49 @@
-Most AI stacks treat every "hi" like a complex math proof. If you do this at scale, you are bleeding money on "Thinking Tax." I ran a simple A/B test: I sent "hi" exactly 4 times to a standard LLM (ChatGPT) and 4 times to GONGJU using the H-Formula (H = pi * psi^2) as a reflex gate.
+# Audit: Solving the "Thinking Tax" with Metabolic Gating
 
-1. The ChatGPT Result: Compounding Overhead
-The Log: You can see the prepare and finalize fetch calls repeating for every single greeting.
+Most AI stacks treat every "hi" like a complex math proof. If you do this at scale, you are bleeding money on **Thinking Tax**. 
 
-The Mass: Each "hi" triggered a payload transfer between 49.7 kB and 53.0 kB.
+## 🔬 The A/B Test: 4x "Hi" Reflex Test
+I compared a standard LLM (ChatGPT) against **GONGJU** using the **H-Formula** ($H = \pi \cdot \psi^2$) as a reflex gate.
 
-Total Data for 4 "his": Over 200 kB of network traffic and full-token reasoning costs for 8 total letters.
+---
 
-The Problem: The standard LLM doesn't know how to stay in a "Low-Energy" state. It wakes up the entire "Brain" every time.
+### 1. The ChatGPT Result: Compounding Overhead
+* **The Log:** Repeated `prepare` and `finalize` fetch calls for every single greeting.
+* **The Mass:** Each "hi" triggered a payload between **49.7 kB and 53.0 kB**.
+* **Total Data (4 "his"):** Over **200 kB** of network traffic.
+* **The Problem:** The standard LLM wakes up the entire "Brain" for a low-intent signal.
 
-2. The GONGJU Result: Metabolic Stability
-The Log: Tightly bundled chat requests with zero bloat.
+### 2. The GONGJU Result: Metabolic Stability
+* **The Log:** Tightly bundled chat requests with zero bloat.
+* **The Mass:** Each interaction stayed between **0.6 kB and 0.8 kB**.
+* **Total Data (4 "his"):** Roughly **3.0 kB**.
+* **The Solution:** The H-Formula detected a Low-Intent signal ($H < H_{min}$), triggering a **"Present-Only Resonance"** (interactive menu) instead of expensive text generation.
 
-The Mass: Each interaction stayed between 0.6 kB and 0.8 kB.
+---
 
-Total Data for 4 "his": Roughly 3.0 kB.
+## 💰 Economic Breakdown
+By using a tiny reflex layer to gate the LLM, I reduced data overhead by **98.5%**.
 
-The Solution: Because the H-Formula detected a Low-Intent signal ($H < H_{min}$), the system triggered a "Present-Only Resonance".
+| Metric | ChatGPT (Reasoning) | GONGJU (Reflex) |
+| :--- | :--- | :--- |
+| **Per "Hi" Mass** | ~51.0 kB | ~0.7 kB |
+| **Total Data** | 200+ kB | 3.0 kB |
+| **Tax Level** | **High Tax** | **Zero Tax** |
 
-Gongju stayed in a "quiet place" and offered a low-token interactive menu (1=body, 2=food, etc.) instead of generating expensive text.
+**The Result:** I’ve processed over **7M tokens for just $21**. 
 
-The Economic Breakdown
-By using a tiny reflex layer to gate the LLM, I reduced the data overhead by 98.5%.
+---
 
-ChatGPT: Treated "hi" as a reasoning task (High Tax).
+## 🖼️ Visual Proof of Metabolic Stability
 
-GONGJU: Treated "hi" as a reflex (Zero Tax).
+### 🎥 Live Reflex Audit
+[Watch the Proof](https://github.com/user-attachments/assets/9d2c5cd6-c0b7-4404-94c0-ec2f05f9deed)
 
-This is how I’ve processed over 7M tokens for just $21. If your stack doesn't have a "Metabolic Gate" to handle low-H junk, you are overpaying for every "hi" your users send.
+### 📊 Latency & Mass Logs
+![ChatGPT Latency Audit](media/visual-proof-chatgpt-latency.png)
+![Gongju Metabolic Audit](media/visual-proof-gongju-latency.png)
 
-How many kB (and dollars) are you spending on greetings? Run the 4x test on your own logs and see for yourself.
-
-### Visual Proof of Metabolic Stability
+---
+**Challenge:** How many kB are you spending on greetings? Run the 4x test on your own logs. If your stack doesn't have a **Metabolic Gate**, you are overpaying.
 ![ChatGPT Latency Audit](/media/visual-proof-chatgpt-latency.png)
 ![Gongju Metabolic Audit](/media/visual-proof-gongju-latency.png)
