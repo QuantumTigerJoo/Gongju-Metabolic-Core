@@ -1,3 +1,5 @@
+![H Formula Test](media/gongju_metabolic_stress.webp)
+
 # 🛡️ Sovereign Governance: Solving the "Black Box" Entropy
 
 ## 🛑 The "Black Box" Problem
