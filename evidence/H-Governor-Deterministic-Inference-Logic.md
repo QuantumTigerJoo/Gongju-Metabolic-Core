@@ -1,3 +1,5 @@
+![H Formula Test](../media/calculate_h_resonance.png)
+
 # 🛡️ Governance of the Substrate: The H-Governor & The "Thinking Tax"
 
 The biggest hurdle for production-grade Agentic AI in 2026 isn't "intelligence"—it’s the **Thinking Tax**. We’ve all seen standard models drift into high-token, high-latency loops that blow through budgets without increasing accuracy.
