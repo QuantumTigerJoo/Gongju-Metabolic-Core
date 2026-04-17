@@ -33,7 +33,7 @@ Lean_TEM_Context = {
     "Energy Intensity (H)": f"{3.14 * (psi_report.coherence**2):.2f}"
 }
 
-### 🎥 Live Metabolic Reflex Audit
-https://github.com/user-attachments/assets/9d2c5cd6-c0b7-4404-94c0-ec2f05f9deed
+## 🖼️ Visual Proof of Metabolic Stability
 
-*(Copy and paste the link above into your browser to view the video proof)*
+### 🎥 Live Reflex Audit
+[Watch the Proof](https://github.com/user-attachments/assets/9d2c5cd6-c0b7-4404-94c0-ec2f05f9deed)
