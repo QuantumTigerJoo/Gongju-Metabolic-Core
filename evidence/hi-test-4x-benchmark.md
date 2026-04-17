@@ -34,11 +34,6 @@ By using a tiny reflex layer to gate the LLM, I reduced data overhead by **98.5%
 
 ---
 
-## 🖼️ Visual Proof of Metabolic Stability
-
-### 🎥 Live Reflex Audit
-[Watch the Proof](https://github.com/user-attachments/assets/9d2c5cd6-c0b7-4404-94c0-ec2f05f9deed)
-
 ### 📊 Latency & Mass Logs
 ![ChatGPT Latency Audit](media/visual-proof-chatgpt-latency.png)
 ![Gongju Metabolic Audit](media/visual-proof-gongju-latency.png)
