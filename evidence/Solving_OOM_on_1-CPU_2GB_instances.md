@@ -35,3 +35,5 @@ Lean_TEM_Context = {
 
 ### 🎥 Live Metabolic Reflex Audit
 https://github.com/user-attachments/assets/9d2c5cd6-c0b7-4404-94c0-ec2f05f9deed
+
+*(Copy and paste the link above into your browser to view the video proof)*
