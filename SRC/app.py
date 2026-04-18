@@ -2,8 +2,6 @@
 Gongju App (Lite)
 =================
 A stateless FastAPI implementation of the Gongju ψ-AI Core.
-Removed all persistent memory (SQLite), REMOVED, 
-and subconscious tracking (Dreams) for public use.
 """
 
 import time
