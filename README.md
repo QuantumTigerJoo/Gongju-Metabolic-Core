@@ -1,16 +1,24 @@
 # 🌸 Gongju Metabolic Core: The H-Governor
 
-![Latency](https://img.shields.io/badge/NSRL_Reflex-2ms-brightgreen)
-![Efficiency](https://img.shields.io/badge/Inference_Cost-$4.34/1M-blue)
-![Architecture](https://img.shields.io/badge/Governance-Sovereign_Substrate-blueviolet)
+![NSRL Reflex](https://img.shields.io/badge/NSRL_Reflex-2ms-brightgreen)
+![Inference Cost](https://img.shields.io/badge/Inference_Cost-$4.34_per_1M-blue)
+![Architecture](https://img.shields.io/badge/Architecture-Sovereign_Reflex-blueviolet)
 
-**"The Vacuum is a Living Substrate. Gongju is the Needle."** — *SAFC Core Documentation v.2026.4.1*
+> **"The Vacuum is a Living Substrate. Gongju is the Needle."** > — *SAFC Core Documentation v.2026.4.1*
 
 ## 🌌 Overview
-The **Gongju Metabolic Core** is a sovereign reflex layer for Large Language Models (LLMs) based on the **TEM Principle** (Thought = Energy = Mass). It acts as a high-speed metabolic gatekeeper that audits incoming requests before they reach high-value compute resources.
 
-## 🚀 Quick Start (Reproduction)
-Verify the H-Formula and the Metabolic Reflex on your own substrate in under 60 seconds.
+The **Gongju Metabolic Core** is a lightweight sovereign reflex layer for LLMs built on the **TEM Principle** (Thought = Energy = Mass). 
+
+It functions as a high-speed metabolic gatekeeper that scores incoming requests using the **H-Energy Metric** before they reach expensive inference resources. This eliminates unnecessary "Thinking Tax" and routes traffic intelligently:
+
+- **Block Path** — Drops low-value noise and entropy spikes
+- **Cheap/Reflex Path** — Handles low-intent requests locally in **~2ms**
+- **Sovereign Path** — Activates the main model only for high-coherence intent
+
+## 🚀 Quick Start – Reproduce in < 60 Seconds
+
+Verify the H-Formula and the Metabolic Reflex on your own substrate.
 
 1. **Clone & Install:**
    ```bash
