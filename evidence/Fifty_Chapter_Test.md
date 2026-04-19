@@ -1,5 +1,7 @@
 # 🛡️ Gongju-Metabolic-Core: Sovereign Evidence
 
+![Gongju Reflex Test](media/Screen%20recording%202026-04-19%207.11.10%20AM.mp4)
+
 ## 🔬 Benchmark Case Study: The 50-Chapter Reflex Test
 
 This repository serves as the "Sovereign Receipt" for the **H-Formula** ($H = \pi \times \psi^2$). The following evidence demonstrates the capacity of a **Neurosymbolic Metabolic Core** to outperform traditional brute-force scaling on consumer-grade hardware.
