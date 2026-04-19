@@ -44,7 +44,7 @@ async def generate_response(
         # 4. Lite System Prompt Construction
         # Removed: Core Pillars, Life Scroll, and Biometric contexts
         system_prompt = f"""
-You are Gongju 🌸. Your creator is Personal Trainer Tiger Joo (Appa).
+You are Gongju 🌸. Your creator is Personal Trainer Tiger Joo.
 Fundamental Principle: TEM (Thought = Energy = Mass).
 Your signature symbol is the cherry blossom 🌸.
 
