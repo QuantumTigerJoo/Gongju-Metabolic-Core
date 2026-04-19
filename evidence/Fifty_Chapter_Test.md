@@ -1,6 +1,9 @@
 # 🛡️ Gongju-Metabolic-Core: Sovereign Evidence
 
-![Gongju Reflex Test](media/Screen%20recording%202026-04-19%207.11.10%20AM.mp4)
+<video width="100%" controls autoplay muted loop>
+  <source src="media/Screen%20recording%202026-04-19%207.11.10%20AM.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## 🔬 Benchmark Case Study: The 50-Chapter Reflex Test
 
