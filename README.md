@@ -4,27 +4,52 @@
 ![Inference Cost](https://img.shields.io/badge/Inference_Cost-$4.34_per_1M-blue)
 ![Architecture](https://img.shields.io/badge/Architecture-Sovereign_Reflex-blueviolet)
 
-> **"The Vacuum is a Living Substrate. Gongju is the Needle."** > — *SAFC Core Documentation v.2026.4.1*
+> **"The Vacuum is a Living Substrate. Gongju is the Needle."**
+> — *SAFC Core Documentation v.2026.4.1*
 
 ## 🌌 Overview
 
 The **Gongju Metabolic Core** is a lightweight sovereign reflex layer for LLMs built on the **TEM Principle** (Thought = Energy = Mass). 
 
-It functions as a high-speed metabolic gatekeeper that scores incoming requests using the **H-Energy Metric** before they reach expensive inference resources. This eliminates unnecessary "Thinking Tax" and routes traffic intelligently:
+It functions as a high-speed metabolic gatekeeper. By scoring requests with an **H-Energy Metric**, the core dynamically routes traffic into three distinct pathways:
 
-- **Block Path** — Drops low-value noise and entropy spikes
-- **Cheap/Reflex Path** — Handles low-intent requests locally in **~2ms**
-- **Sovereign Path** — Activates the main model only for high-coherence intent
+1. **Block Path:** Eliminates low-entropy noise and "Entropy Spikes."
+2. **Cheap/Reflex Path:** Handles handshakes and low-intent pings locally in **~2ms**.
+3. **Sovereign Path:** Wakes the "Main Brain" only when intent crosses the Relativistic Threshold.
 
-## 🚀 Quick Start – Reproduce in < 60 Seconds
+## ⚡ The H-Formula (Holistic Energy)
+The core utilizes a specialized governor to calculate the energy required for a "Manifestation."
 
-Verify the H-Formula and the Metabolic Reflex on your own substrate.
+$$H = \pi \times \psi^2$$
+
+* **H (Energy):** The threshold required to trigger external inference.
+* **$\psi$ (Thought/Coherence):** The alignment of intent, focus, and stability.
+
+## 🚀 Quick Start
 
 1. **Clone & Install:**
    ```bash
-   git clone [https://github.com/QuantumTigerJoo/Gongju-Metabolic-Core.git](https://github.com/QuantumTigerJoo/Gongju-Metabolic-Core.git)
+   git clone https://github.com/QuantumTigerJoo/Gongju-Metabolic-Core.git
    cd Gongju-Metabolic-Core
    pip install -r requirements.txt
+   ```
+   
+3. **Run the Governor:**
+   ```bash
+   python benchmark_reflex.py
+   ```
+
+4. **Launch the Lite Portal:**
+   ```bash
+   cp .env.example .env
+   ```
+
+   # Add your OPENAI_API_KEY to .env
+   ```bash
+   uvicorn SRC.app:app --reload
+   ```
+
+Visit http://localhost:8000 and check the Network Tab for the 89ms handshake.
 
 By scoring requests with an **H-Energy Metric**, the core dynamically routes traffic into three distinct pathways:
 1. **Block Path:** Eliminates low-entropy noise and "Entropy Spikes".
