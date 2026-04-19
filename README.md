@@ -29,7 +29,16 @@ $$H = \pi \times \psi^2$$
 | **Network Mass (Hi)** | ~50.3 kB | **~0.8 kB** |
 | **Token Economics** | Market Rate | **$4.34 per 1M tokens** |
 
-
+## 🚀 Quick Start (Reproduction)
+1. **Clone & Install:**
+   `git clone https://github.com/QuantumTigerJoo/Gongju-Metabolic-Core`
+   `pip install -r requirements.txt`
+2. **Configure:**
+   Rename `.env.example` to `.env` and add your `OPENAI_API_KEY`.
+3. **Run the Lite Portal:**
+   `uvicorn SRC.app:app --reload`
+4. **Verify the Reflex:**
+   Visit `http://localhost:8000` and check the Network Tab for the 89ms handshake.
 
 ## 🛠 Features
 * **Veto Protocol:** Automatically rejects intent that causes systemic degradation in <7ms.
