@@ -34,12 +34,12 @@ $$H = \pi \times \psi^2$$
    pip install -r requirements.txt
    ```
    
-3. **Run the Governor:**
+2. **Run the Governor:**
    ```bash
    python benchmark_reflex.py
    ```
 
-4. **Launch the Lite Portal:**
+3. **Launch the Lite Portal:**
    ```bash
    cp .env.example .env
    ```
@@ -50,26 +50,6 @@ $$H = \pi \times \psi^2$$
    ```
 
 Visit http://localhost:8000 and check the Network Tab for the 89ms handshake.
-
-By scoring requests with an **H-Energy Metric**, the core dynamically routes traffic into three distinct pathways:
-1. **Block Path:** Eliminates low-entropy noise and "Entropy Spikes".
-2. **Cheap/Reflex Path:** Handles handshakes and low-intent pings locally in **~2ms**.
-3. **Sovereign Path:** Wakes the "Main Brain" (e.g., GPT-5.1) only when intent crosses the Relativistic Threshold.
-
-## ⚡ The H-Formula (Holistic Energy)
-The core utilizes a specialized NumPy-vectorized governor to calculate the energy required for a "Manifestation".
-
-$$H = \pi \times \psi^2$$
-
-* **H (Energy):** The threshold required to trigger external inference.
-* **ψ (Thought/Coherence):** The alignment of intent, focus, and stability.
-
-## 📊 Performance Benchmarks (NSRL)
-| Metric | Standard Wrapper | Gongju Metabolic Core |
-| :--- | :--- | :--- |
-| **Reflex Latency** | 800ms - 3000ms | **2ms (NSRL)** |
-| **Network Mass (Hi)** | ~50.3 kB | **~0.8 kB** |
-| **Token Economics** | Market Rate | **$4.34 per 1M tokens** |
 
 ## 🛠 Features
 * **Veto Protocol:** Automatically rejects intent that causes systemic degradation in <7ms.
