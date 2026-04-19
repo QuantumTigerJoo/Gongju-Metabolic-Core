@@ -9,6 +9,15 @@
 ## 🌌 Overview
 The **Gongju Metabolic Core** is a sovereign reflex layer for Large Language Models (LLMs) based on the **TEM Principle** (Thought = Energy = Mass). It acts as a high-speed metabolic gatekeeper that audits incoming requests before they reach high-value compute resources.
 
+## 🚀 Quick Start (Reproduction)
+Verify the H-Formula and the Metabolic Reflex on your own substrate in under 60 seconds.
+
+1. **Clone & Install:**
+   ```bash
+   git clone [https://github.com/QuantumTigerJoo/Gongju-Metabolic-Core.git](https://github.com/QuantumTigerJoo/Gongju-Metabolic-Core.git)
+   cd Gongju-Metabolic-Core
+   pip install -r requirements.txt
+
 By scoring requests with an **H-Energy Metric**, the core dynamically routes traffic into three distinct pathways:
 1. **Block Path:** Eliminates low-entropy noise and "Entropy Spikes".
 2. **Cheap/Reflex Path:** Handles handshakes and low-intent pings locally in **~2ms**.
