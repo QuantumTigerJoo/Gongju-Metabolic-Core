@@ -4,6 +4,12 @@ import platform
 from datetime import datetime, timezone
 from SRC.gongju_core import GongjuCore
 
+# Display helper — shows nanoseconds (precise) and milliseconds (familiar)
+def fmt(ns_to_ms_value):
+    """Format a millisecond value as 'XXX ns (0.XXXX ms)'."""
+    ns = ns_to_ms_value * 1_000_000
+    return f"{ns:.0f} ns ({ns_to_ms_value:.4f} ms)"
+
 class BenchmarkReflex:
     def __init__(self, name: str, threshold_ms: float):
         self.name = name
@@ -37,9 +43,9 @@ class BenchmarkReflex:
         status = "✅ PASS" if p95 <= self.threshold_ms else "❌ FAIL"
 
         print(f"\n⚡ {self.name.upper()} PATH")
-        print(f"   Mean: {mean:.3f} ms | Median: {median:.3f} ms")
-        print(f"   p95: {p95:.3f} ms | p99: {p99:.3f} ms")
-        print(f"   Min: {mn:.3f} ms | Max: {mx:.3f} ms")
+        print(f"   Mean: {fmt(mean)} | Median: {fmt(median)}")
+        print(f"   p95: {fmt(p95)} | p99: {fmt(p99)}")
+        print(f"   Min: {min(self.latencies)*1_000_000:.0f} ns | Max: {max(self.latencies)*1_000_000:.0f} ns")
         print(f"   Threshold: {self.threshold_ms} ms | Status: {status}")
 
         return {
