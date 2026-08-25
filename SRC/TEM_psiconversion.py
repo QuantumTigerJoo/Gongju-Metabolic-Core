@@ -10,6 +10,25 @@ from enum import Enum
 from typing import Dict, List, Optional, Tuple
 import re
 import time
+import re
+
+_COMMIT_WORDS = ("i will", "i'm going to", "i am going to", "i must", "today",
+                 "tonight", "commit", "i want", "i need", "going to", "plan to")
+_HEDGE_WORDS = ("maybe", "kinda", "sort of", "might", "i guess", "someday",
+                "later", "perhaps", "possibly", "probably", "not sure")
+_EXCITE_WORDS = ("excited", "thrilled", "pumped", "fired up", "can't wait",
+                 "ready", "motivated", "inspired", "passionate")
+_BUSINESS_WORDS = ("clients", "business", "sales", "marketing", "grow",
+                   "launch", "revenue", "profit", "customers", "training")
+
+def _rx(words):
+    escaped = [re.escape(w) for w in words]
+    return re.compile(r"\b(?:%s)\b" % "|".join(escaped))
+
+RX_COMMIT = _rx(_COMMIT_WORDS)
+RX_HEDGE = _rx(_HEDGE_WORDS)
+RX_EXCITE = _rx(_EXCITE_WORDS)
+RX_BUSINESS = _rx(_BUSINESS_WORDS)
 
 @dataclass
 class TEMConfig:
@@ -85,3 +104,40 @@ class TEMEngine:
 
 def _clamp(x: float) -> float:
     return max(0.0, min(1.0, float(x)))
+
+def infer_tem_inputs(text: str) -> Tuple[EmotionProfile, float, float]:
+    """Convert raw text → (EmotionProfile, intent_clarity, focus)."""
+    t = (text or "").lower().strip()
+
+    def has(rx): return bool(rx.search(t))
+    def count(rx): return len(rx.findall(t))
+
+    # Emotion inference
+    joy = 0.6 if has(RX_EXCITE) else 0.0
+    determination = 0.6 if has(RX_COMMIT) else 0.0
+    gratitude = 0.4 if "grateful" in t or "thankful" in t else 0.0
+    calm = 0.3 if has(RX_HEDGE) or "thinking" in t else 0.0
+    curiosity = 0.3 if "curious" in t or "wonder" in t else 0.0
+
+    emo = EmotionProfile(
+        joy=joy, gratitude=gratitude, determination=determination,
+        calm=calm, curiosity=curiosity
+    )
+
+    # Intent clarity
+    clarity = 0.2
+    if has(RX_COMMIT): clarity += 0.4
+    if has(RX_BUSINESS): clarity += 0.2
+    if has(RX_HEDGE): clarity -= 0.2
+    if any(x in t for x in ("today", "tonight", "now")): clarity += 0.2
+    clarity = _clamp(clarity)
+
+    # Focus
+    focus = 0.2
+    if has(RX_COMMIT): focus += 0.4
+    if any(x in t for x in ("today", "tonight", "now", "right now")): focus += 0.3
+    if has(RX_HEDGE): focus -= 0.2
+    focus = _clamp(focus)
+
+    return emo, clarity, focus
+
