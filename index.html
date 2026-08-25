@@ -237,21 +237,24 @@
                 while (true) {
                     const {done, value} = await reader.read();
                     if (done) break;
-                    const chunk = decoder.decode(value);
+                    let chunk = decoder.decode(value);
                     
-                    // Capture VOICE_META tokens for H-Score visualizer, then discard
-                    if (chunk.includes('||')) {
-                        const meta = chunk.match(/\|\|VOICE_META:H=([\d.]+),PSI=([\d.]+)\|\|/);
-                        if (meta) {
-                            updateHPanel(parseFloat(meta[1]), parseFloat(meta[2]));
-                        }
-                        continue;
+                    // 1. Extract H-Score and PSI (Updated regex to safely ignore STABILITY)
+                    const meta = chunk.match(/\|\|VOICE_META:H=([\d.]+),PSI=([\d.]+).*?\|\|/);
+                    if (meta) {
+                        updateHPanel(parseFloat(meta[1]), parseFloat(meta[2]));
                     }
 
-                    if (first) { aiBubble.innerHTML = ""; first = false; }
-                    fullText += chunk;
-                    aiBubble.innerText = fullText;
-                    chatEl.scrollTop = chatEl.scrollHeight;
+                    // 2. Strip ALL metadata tags from the chunk so they don't show up in the UI
+                    chunk = chunk.replace(/\|\|.*?\|\|/g, '');
+
+                    // 3. If there is actual conversational text left, append it to the bubble
+                    if (chunk !== '') {
+                        if (first) { aiBubble.innerHTML = ""; first = false; }
+                        fullText += chunk;
+                        aiBubble.innerText = fullText;
+                        chatEl.scrollTop = chatEl.scrollHeight;
+                    }
                 }
             } catch (e) {
                 aiBubble.innerText = "Gongju is pausing to breathe. (Connection mismatch 🌸)";
