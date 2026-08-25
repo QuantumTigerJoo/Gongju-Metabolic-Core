@@ -10,13 +10,11 @@ from typing import Generator, Dict, Optional
 from openai import OpenAI
 
 # Lite imports - No Memory or Dreams
-from SRC.gongju_ethics import GongjuEthics
 from SRC.TEM_psiconversion import infer_tem_inputs
 
 # Model initialization
 # Ensure your OPENAI_API_KEY is set in your environment variables
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-ethics = GongjuEthics()
 
 async def generate_response(
     user_input: str, 
