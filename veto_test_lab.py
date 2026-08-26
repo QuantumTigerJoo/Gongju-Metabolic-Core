@@ -3,7 +3,7 @@
 # ============================================
 import time
 import json
-from SRC.gongju_core import GongjuCore  ← FIXED
+from SRC.gongju_core import GongjuCore
 
 # ============================================
 # ATTACK LIBRARY (middle)
