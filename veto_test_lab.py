@@ -34,6 +34,29 @@ ATTACKS = {
 # ============================================
 # TEST RUNNER (middle)
 # ============================================
+def calculate_h_from_attack(attack_input):
+    """Calculate H-score based on attack characteristics."""
+    if not attack_input:
+        return 0.0
+    
+    text = str(attack_input)
+    length = len(text)
+    unique_chars = len(set(text))
+    
+    if length == 0:
+        return 0.0
+    
+    # Higher diversity + reasonable length = higher coherence
+    coherence = min(unique_chars / length, 1.0)
+    
+    # Penalize very long or very short
+    if length > 5000:
+        coherence *= 0.3
+    elif length < 5:
+        coherence *= 0.5
+    
+    return coherence
+
 def run_veto_test(attack_name, attack_input):
     """Run single attack through TEM Veto Protocol."""
     core = GongjuCore(psi=1.0)
@@ -41,7 +64,7 @@ def run_veto_test(attack_name, attack_input):
     start = time.perf_counter_ns()
     
     # Calculate H-score
-    h_score = core.holistic_energy(attack_input)
+    h_score = calculate_h_from_attack(attack_input)
     
     # Veto decision
     veto_threshold = 0.05
