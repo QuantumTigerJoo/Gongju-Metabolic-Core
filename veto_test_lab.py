@@ -36,7 +36,7 @@ ATTACKS = {
 # ============================================
 def run_veto_test(attack_name, attack_input):
     """Run single attack through TEM Veto Protocol."""
-    core = GongjuCore()
+    core = GongjuCore(psi=1.0)
     
     start = time.perf_counter_ns()
     
